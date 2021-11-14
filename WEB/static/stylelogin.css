@@ -8,6 +8,9 @@
 body {
   	margin: 0;
 }
+img {
+position: center;
+}
 .login, .register {
   	width: 400px;
   	background-color: #ffffff;

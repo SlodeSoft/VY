@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="{{ stylesbuttoninput }}">
 </head>
 <body>
-<table align="left" title="VyOS Registered">
-    <div class="row">
-        <h1>VyOS Registered</h1>
+<form method="get">
+    <table align="left" title="VyOS Registered">
+        <tr>
+            <a href="#">
+                <h1>VyOS Registered</h1>
+            </a>
+        </tr>
         {% for x in row %}
         <tr>
             <td>
@@ -18,16 +22,16 @@
             </td>
         </tr>
         {% endfor %}
-    </div>
-    <tr>
-        <td>
-            <a href="/add-vy">
-                <button type="button" name="add-vy" title="add-vy" id="add-vy" value="ADD VY" onclick="{{ msg }}">
-                    ADD
-                </button>
-            </a>
-        </td>
-    </tr>
-</table>
+        <tr>
+            <td>
+                <a href="/add-vy">
+                    <button type="button" name="add-vy" title="add-vy" id="add-vy" value="ADD VY" onclick="{{ msg }}">
+                        ADD
+                    </button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
