@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ stylesbuttoninput }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 <body>
 <div class="addvy">
@@ -34,7 +33,12 @@
                     <button type="submit" name="submit" title="submit" id="submit" value="SUBMIT">
                         SUBMIT
                     </button>
-                    <div class="msg">{{ msg }}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="msg" id="msg" title="msg" readonly value="{{ msg }}"
+                           style="background: #000000; color: #FFBE12; font-weight: bold;">
                 </td>
             </tr>
         </table>

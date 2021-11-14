@@ -7,7 +7,20 @@ color: #FFBE12;
 }
 
 p {
-color: #adadad;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased !important;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    color: #000000;
+    margin-bottom: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background: white !important;
+
 }
 
 input {
@@ -30,6 +43,7 @@ input {
 :-moz-placeholder { color: #666; }
 ::-moz-placeholder { color: #666; }
 :-ms-input-placeholder { color: #666; }
+
 
 button {
   background: #FFBE12;

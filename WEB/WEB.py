@@ -173,17 +173,14 @@ def addvy():
         # If account exists show error and validation checks"""
         if submit:
             print(submit[0])
-            msg = 'Device already exists!'
+            msg = 'Device already exists !'
             return msg
         elif not re.match(r'^([0-9]{1,3}\.){3}[0-9]{1,3}$', host):
-            msg = 'Invalid ip address, must be e.g 1.2.3.4'
-            print("3 if")
+            msg = 'Invalid ip address, must be e.g 1.2.3.4 !'
         elif not re.match(r'[0-9]+', port):
-            msg = "Invalid Port, must be integer e.g 22"
-            print("4 if")
+            msg = "Invalid Port, must be integer e.g 22 !"
         elif not user or not paswd or not port or not host:
-            msg = "Not Valid form, check informations's device"
-            print("5 if")
+            msg = "Not Valid form, check informations's device !"
         else:
             """sql = "CALL `INSERT_NEW_VY`(%s, %s, %s)"
             values = (set_key,
@@ -193,18 +190,14 @@ def addvy():
             submit = bddcon.cursor.fetchone()
             # If account exists show error and validation checks"""
             # Device doesnt exists and the form data is valid, now insert new account into accounts table
-            msg = "VyOS Device Added"
-            print("OK IF")
-            return msg
+            msg = "VyOS Device Added !"
     elif request.method == 'POST':
         # Form is empty... (no POST data)
         msg = 'Please fill out the form !'
-        print("empty if")
-    if request.method == 'GET':
-        return render_template('add-vy.html',
-                               stylesbuttoninput='./static/styles-button-input.css',
-                               title=title,
-                               msg=msg)
+    return render_template('add-vy.html',
+                           stylesbuttoninput='./static/styles-button-input.css',
+                           title=title,
+                           msg=msg)
 
 
 @app.route('/config', methods=['GET', 'POST'])
