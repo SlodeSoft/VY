@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ stylesbuttoninput }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body>
+<div class="addvy">
+    <form  action="{{ url_for('addvy') }}" method="POST">
+        <table align="center" title="ADD VYOS DEVICES">
+            <tr>
+                <td>
+                    <input type="text" name="host" id="host" title="HOST" placeholder="Host" required>
+                </td>
+            <tr>
+                <td>
+                    <input type="text" name="username" id="username" title="USERNAME" placeholder="Username" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="password" id="password" title="PASSWORD" placeholder="Password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="port" id="port" title="PORT" placeholder="Port" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="submit" title="submit" id="submit" value="SUBMIT">
+                        SUBMIT
+                    </button>
+                    <div class="msg">{{ msg }}</div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

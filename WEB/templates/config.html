@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ stylesbuttoninput }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body>
+<form  action="{{ url_for('config') }}" method="POST" id="EDIT VYOS DEVICES" name="EDIT VYOS DEVICES" title="EDIT VYOS DEVICES">
+    <table align="center" title="EDIT VYOS DEVICES">
+        <tr>
+            <td>
+                <button type="submit" name="shconfig" title="shconfig" id="shconfig" value="SHOW CONFIG">
+                    SHOW CONFIG
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" name="shconfigcmd" title="shconfigcmd" id="shconfigcmd" value="SHOW CONFIG CMD">
+                    SHOW CONFIG COMMANDS
+                </button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
